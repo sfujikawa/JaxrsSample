@@ -20,6 +20,7 @@ public class JsonService {
         return jsonDataList;
     }
     public List<JsonData> getJson(String name){
+        
         if (name != null) {
         //パラメータを元に、1件追加
         jsonDataList.add(new JsonData(400, name, new Date(System.currentTimeMillis())));
