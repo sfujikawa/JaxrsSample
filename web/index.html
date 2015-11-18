@@ -13,12 +13,28 @@ and open the template in the editor.
     <body>
         <div>Jax-RS</div>
         <a href="rest/helloWorld">
-            helloWord(http://localhost:8080/jaxrsSample/rest/helloWorld)
+            URLを指定して文字列を取得する(http://localhost:8080/jaxrsSample/rest/helloWorld)
         </a>
-        <br>
+        <br><br>
         <a href="rest/json">
-            JSON(http://localhost:8080/jaxrsSample/rest/json)
+            URLを指定してJSONデータを取得する(http://localhost:8080/jaxrsSample/rest/json)
         </a>
-        
+        <br><br>
+        <form id="getParam"
+              action="http://localhost:8080/jaxrsSample/rest/getParam" 
+              method="get">
+            GETパラメータを指定する。
+            <input type="text" name="name" value="げっと"/>
+            <input type="submit" value="送信"/>
+        </form>
+        <br>
+        <form id="postParam"
+              action="http://localhost:8080/jaxrsSample/rest/postParam" 
+              method="post">
+            POSTパラメータを指定する。
+            <input type="text" name="name" value="ぽすと"/>
+            <input type="submit" value="送信"/>
+        </form>
+
     </body>
 </html>
