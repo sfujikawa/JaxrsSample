@@ -20,8 +20,24 @@ public class MyApplication extends Application {
     */
 }
 //JAX-RSとは
+//Java API for RESTful Web Services
 //REST アーキテクチャにのっとって web アプリケーションを記述するための Java の API。
 //Java EE の一部。
+//リソースクラス(POJO)をWebリソースにマッピングしてくれる
+
+//RESTとは
+//Representational State Transfer
+//広いい意味では、
+//  HTTP仕様に準拠し、URLを指定して、XML等のデータを得るようなインターフェス。
+//  過去の通信手段(CORBA,DCOM、SORP)を使わない。
+//
+//厳密には、
+//個々の Web サービスをリソースと見なし、Web サービスをその URL によって一意に識別できるアーキテクチャー原則のこと。
+//
+//RESTfullとは
+//その原則に、従っていること。
+//
+
 //ライブラリを追加。(追加しなくても動いた) JAX-RS 2.0 -javax.ws.rs-api2.0.jar
 //Jerseyが含まれている、Jersey(ジャージー？)はJAX-RSの実装
 
