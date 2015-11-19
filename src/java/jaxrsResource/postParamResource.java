@@ -16,17 +16,21 @@ public class postParamResource {
 
     //CDIビーンじゃないけど@Injectで呼び出せるはず
     //わかりやすいJavaEE P350
-    //でも実行時にエラー、SCIのスコープアノテーションが必要？
+    //でも実行時にエラー、SCIのスコープアノテーションが必要？ beans.xmlは必要？
     @EJB
     JsonService JsonService;
 
+    //パラメータは変数へのアノテーションでも取得可能
+    //@FormParam("name")
+    //private String name;
+    
     //POSTパラメーターを受け取る
     @POST
     @Produces({MediaType.APPLICATION_JSON})
     public List<JsonData> getjson(
             //POSTの場合は、QueryParamでなくFormParam
             @FormParam("name") String name) {
-
+        
         return JsonService.getJson(name);
     }
 }
