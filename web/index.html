@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>JAX-RS sample</title>
@@ -24,7 +19,7 @@ and open the template in the editor.
               action="http://localhost:8080/jaxrsSample/rest/getParam" 
               method="get">
             GETパラメータを指定する。
-            <input type="text" name="name" value="げっと"/>
+            <input type="text" name="name" value="★げっと"/>
             <input type="submit" value="送信"/>
         </form>
         <br>
@@ -32,9 +27,39 @@ and open the template in the editor.
               action="http://localhost:8080/jaxrsSample/rest/postParam" 
               method="post">
             POSTパラメータを指定する。
-            <input type="text" name="name" value="ぽすと"/>
+            <input type="text" name="name" value="★ぽすと"/>
             <input type="submit" value="送信"/>
         </form>
-
+        <br>
+        <a href="rest/PathParam/1">
+            Pathの値でパラメータを指定する。(http://localhost:8080/jaxrsSample/rest/PathParam/1)
+        </a>
+        <br><br>
+        <form id="cdiEjb"
+              action="http://localhost:8080/jaxrsSample/rest/cdiEjb" 
+              method="post">
+            TODO:リソースクラス自体をCDI/EJB化
+            <input type="text" name="name" value="★ぽすと"/>
+            <input type="submit" value="送信"/>
+        </form>
+        <br>
+        <form id="jsonfile"
+              action="http://localhost:8080/jaxrsSample/rest/jsonFile" 
+              method="post"
+              enctype="text/plain">
+            TODO:JSONデータを送信
+            <!-- enctype="multipart/form-data" -->
+            <!-- enctype="text/plain" -->
+            <!-- enctype="application/xml" -->
+            <input type="file" name="nameList" />
+            <input type="submit" value="送信">
+        </form>
+        <br><br>
+        参考
+        <br>
+        <a href="http://backpaper0.github.io/2013/05/02/jaxrs.html">
+            http://backpaper0.github.io/2013/05/02/jaxrs.html
+        </a>
+        <br><br>
     </body>
 </html>
