@@ -17,7 +17,7 @@
         <a href="rest/json">
             http://localhost:8080/jaxrsSample/rest/json
         </a>
-        <br>jsonResource.java
+        <br>JsonResource.java
 
         <br><br>
         <form id="getParam"
@@ -27,7 +27,7 @@
             <input type="text" name="name" value="★げっと"/>
             <input type="submit" value="送信"/>
         </form>
-        getParamResource.java
+        GetParamResource.java
         <br><br>
         <form id="postParam"
               action="http://localhost:8080/jaxrsSample/rest/postParam" 
@@ -36,7 +36,7 @@
             <input type="text" name="name" value="★ぽすと"/>
             <input type="submit" value="送信"/>
         </form>
-        postParamResource.java
+        PostParamResource.java
         <br><br>
         Pathの値でパラメータを指定する。<br>
         <a href="rest/PathParam/abc">
@@ -51,11 +51,24 @@
             <input type="text" name="name" value="★保持"/>
             <input type="submit" value="送信"/>
         </form>
-        <br>cdiEjbResource.java
+        CdiEjbResource.java
         <br>JsonCdiService.java
         <br><br>
-        
-       
+        1つのリソースクラスで、複数のパスを定義
+        <form id="multiPathA"
+              action="http://localhost:8080/jaxrsSample/rest/multiPath/pathA" 
+              method="post">
+            <input type="text" name="name" value="★ひとつめ"/>
+            <input type="submit" value="送信"/>
+        </form>
+        <form id="multiPathB"
+              action="http://localhost:8080/jaxrsSample/rest/multiPath/pathB" 
+              method="post">
+            <input type="text" name="name" value="★ふたつめ"/>
+            <input type="submit" value="送信"/>
+        </form>
+        MultiPathResource.java
+        <br><br>
         <form id="jsonfile"
               action="http://localhost:8080/jaxrsSample/rest/jsonFile" 
               method="post"
