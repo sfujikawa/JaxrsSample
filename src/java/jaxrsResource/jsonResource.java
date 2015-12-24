@@ -22,6 +22,4 @@ public class jsonResource {
     public List<JsonData> getjson() {
         return JsonService.getJson();
     }
-
-    //TODO:POSTパラメーターをJSONで受け取る
 }

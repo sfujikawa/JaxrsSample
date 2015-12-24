@@ -2,7 +2,6 @@ package jaxrsResource;
 
 import java.util.List;
 import javax.ejb.EJB;
-//import javax.inject.Inject;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
@@ -18,18 +17,17 @@ public class postParamResource {
     //わかりやすいJavaEE P350
     //でも実行時にエラー、SCIのスコープアノテーションが必要？ beans.xmlは必要？
     @EJB
+    //@Inject
     JsonService JsonService;
 
     //パラメータは変数へのアノテーションでも取得可能
-    //@FormParam("name")
-    //private String name;
+    @FormParam("name")
+    private String name;
     
     //POSTパラメーターを受け取る
     @POST
     @Produces({MediaType.APPLICATION_JSON})
-    public List<JsonData> getjson(
-            //POSTの場合は、QueryParamでなくFormParam
-            @FormParam("name") String name) {
+    public List<JsonData> getjson() {
         
         return JsonService.getJson(name);
     }

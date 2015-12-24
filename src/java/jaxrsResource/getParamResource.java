@@ -16,12 +16,16 @@ public class getParamResource {
     @EJB
     JsonService JsonService;
 
+    private List<JsonData> jsonDataList;
+
     //GETパラメーターを受け取る
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<JsonData> getjson(
             @QueryParam("name") String name) {
 
-        return JsonService.getJson(name);
+        jsonDataList = JsonService.getJson(name);
+        
+        return jsonDataList;
     }
 }
